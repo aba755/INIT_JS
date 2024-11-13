@@ -357,6 +357,7 @@ if (nbPhotocopie > 0) {
 console.log("le cout total des photocopies est de : " + coutTotal.toFixed(2) + "Euro");
 */
 
+/*
 //FUNCTION FILTRER LES PERSONNAGES JEDI:
 function filtrerParAffiliation(affiliation, tableau) {
     const resultes = [];
@@ -411,3 +412,5 @@ console.log(nombreTotalPersonnages);
 // Verfier si un personnage est présent dans le tableau (ex : "Yoda"):
 const estPresent = personnages.some(personnage => personnage.nom === "Yoda");
 console.log(estPresent ? "Yoda est present dans le tableau ." : "Yoda n'est pas present dans le tableau.");
+*/
+
