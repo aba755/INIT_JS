@@ -414,3 +414,82 @@ const estPresent = personnages.some(personnage => personnage.nom === "Yoda");
 console.log(estPresent ? "Yoda est present dans le tableau ." : "Yoda n'est pas present dans le tableau.");
 */
 
+
+// Fonction Javascript
+
+//alert("Coucou!");
+//console.log("Ah que Coucou!");
+//document.write("Coucou beuh!");
+
+
+// CREATION D'UN NOEUD ELEMENT OU UN NOEUD TEXT
+//let newP= document.createElement('p');
+// nous avons crée ici un nouvel élément p. celui-ci ne contient pour le moment ni attribut ni contenu textuel, et n'a pas encore été inseré à l'interieur de notre page à un endroit precis.
+
+// pour inserer du texte dans notre noeud élément
+
+//newP.textContent= 'Paragraphe crée et inseré grâce au Javascript';
+
+// créer directement en utilisant la méthode createTextNode() de Document :
+//let b = document.body;
+/*let newP= document.createElement('p');
+let newTexte = document.createTextNode('Texte écrit en Javascript');
+newP.textContent = 'Paragraphe crée et inséré grâce au Javascript';
+b.prepend(newP); //Ajoutes le paragraphe crée comme premier enfant de l'élément body
+
+b.append(newTexte); // Ajoutes le texte crée comme dernier enfant de l'élément body */
+
+
+
+
+
+/*
+// utilisation de la methode ' appendChild()' de l'interface Node qui permet d'ajouter un noeud en tant que dernier enfant d'un noeud parent.
+let b = document.body;
+let newP= document.createElement('p');
+let newTexte = document.createTextNode('Texte inseré avec appendChild()');
+newP.textContent = 'Paragraphe crée et inséré grâce au Javascript';
+
+// ceci fonctionne
+b.prepend(newP, 'Texte inséré avec append()'); 
+
+// ceci fonctionne 
+b.appendChild(newTexte);
+
+//Ceci ne fonctionne pas : b.appendChild('Texte écrit en JavaScript');
+//Ceci ne fonctionne pas non plus : b.appendChild(newP, newTexte);
+*/
+
+
+
+/*
+//on peut également utiliser la méthode 'appendChild()' de l'interface 'Node' qui permet d'ajouter un noeud en tant que dernier enfant d'un noeud parent.
+let b = document.body;
+let newP= document.createElement('p');
+let newTexte = document.createTextNode('Texte inseré avec appendChild()');
+
+newP.textContent = 'Paragraphe crée et inséré grâce au Javascript';
+
+// ceci fonctionne
+b.append(newP, 'Texte inséré avec append()');
+
+
+// ceci fonctionne 
+b.appendChild(newTexte);
+
+//Ceci ne fonctionne pas : b.appendChild('Texte écrit en JavaScript');
+//Ceci ne fonctionne pas non plus : b.appendChild(newP, newTexte);
+*/
+
+
+
+// On peut utiliser la methode 'inserBefore()' de l'interface 'Node' qui permet pour sa part d'insérer un noeud en tant que enfant d'un autre noeud juste avant certain noeud enfant donné de ce parent.
+
+let b = document.body;
+let p1= document.getElementById('p1');
+let newP = document.createElement('p');
+
+newP.textContent = 'Paragraphe crée et inséré grâce au Javascript en 2024';
+
+// ceci fonctionne
+b.insertBefore(newP,p1);
