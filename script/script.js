@@ -485,6 +485,7 @@ b.appendChild(newTexte);
 
 // On peut utiliser la methode 'inserBefore()' de l'interface 'Node' qui permet pour sa part d'insérer un noeud en tant que enfant d'un autre noeud juste avant certain noeud enfant donné de ce parent.
 
+/*
 let b = document.body;
 let p1= document.getElementById('p1');
 let newP = document.createElement('p');
@@ -493,3 +494,94 @@ newP.textContent = 'Paragraphe crée et inséré grâce au Javascript en 2024';
 
 // ceci fonctionne
 b.insertBefore(newP,p1);
+*/
+
+/*
+let b = document.body;
+let p1 = document.getElementById('p1');
+let p2 = document.getElementById('p2');
+let newP = document.createElement('p');
+let htmlContent = 'Paragraphe créé et inséré grâce au javaScript';
+
+//Ajouter un paragraphe après p1
+p1.insertAdjacentElement('afterend', newP);
+
+//Ajouter le contenu de htmlContent avant la balise fermante de p1
+p1.insertAdjacentHTML('beforeend', htmlContent);
+
+//Ajouter du texte après la balise ouvrante de p2
+p2.insertAdjacentText('afterbegin', 'Texte ajouté dans');
+*/
+
+
+//FONCTION 
+
+//Fonction pour lire le DOM
+
+/*
+document.getElementById('dom').addEventListener('click', function(){
+    console.log(document.getElementById('titre2').innerText); //Affiche le texte de la balise ayant l'id 'titre2'
+
+    // afficher le nombre de balise ayant la classe 'titre'
+    const titres=document.getElementsByClassName('titre');
+    console.log(titres.length);
+
+    // afficher le texte de toutes les balises ayant la classe 'titre'
+    for(let titre of titres){
+        console.log(titre.innerText);
+    }
+
+    //afficher le texte de toutes les balises 'li'
+    const items= document.querySelectorAll('li');
+    items.forEach(item =>
+        console.log(item.innerText));
+});
+
+
+//Fonction pour modifier le DOM
+document.getElementById('dom_modif').addEventListener('click' , function(){
+
+    // changer le contenu du h1 en 'Bienvenue'
+    document.getElementById('titre1').innerText = 'Bienvenue';
+
+    // changer le contenu du h2 en 'Exo JS' 
+    document.getElementById('titre2').innerText = 'Exo JS';
+
+    // changer le contenu du paragraphe 
+    document.getElementById('paragraphe1').innerText = 'Voici quelques fonctions exécutées en Javascript.';
+
+    // changer le contenu de chaque point (li) de la liste 
+    const newitems = ['liste1', 'liste2', 'liste3' , 'liste4' , 'liste5'];
+    items.forEach((item, index) => {
+        item.innerText = newitems[index];
+    });
+});
+
+//Fonction pour modifier le style 
+document.getElementById('style').addEventListener('click', function(){
+
+
+    //aligner le titre 1 au centre de la page 
+    document.getElementById('titre1').style.textAlign = 'center';
+
+    //mettre en rouge tous les éléments ayant la classe 'titre'
+    const titres = document.getElementsByClassName('titre');
+    for (let titre of titres){
+        titre.style.color = 'red';
+    }
+
+    //Mettre une bourdure et un padding au paragraphe 
+    const paragraphe = document.getElementById('paragraphe1');
+    paragraphe.style.border = 'solid 1px black';
+    paragraphe.style.padding = '10px';
+
+    //faire diparaître la liste 
+    document.getElementById('liste').style.display = 'none' 
+});
+*/
+
+
+document.querySelector('#lien').onclick = function()
+{
+    alert ('Vous avez cliqué !');
+}
